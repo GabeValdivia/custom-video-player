@@ -10,6 +10,27 @@ function toggleVideoStatus() {
 	return true;
 }
 
+
+// Update play/pause icon
+function updatePlayIcon() {
+	return true;
+}
+
+// Update progress and timestamp
+function updateProgress() {
+	return true;
+}
+
+// Set video time to progress
+function setVideoProgress() {
+	return true;
+}
+
+// Stop video
+function stopVideo() {
+	return true;
+}
+
 // Event Listeners
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('pause', updatePlayIcon);
