@@ -2,6 +2,7 @@ const video = document.getElementById('video');
 const play = document.getElementById('play');
 const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
+const volume = document.getElementById('volume');
 const timestamp = document.getElementById('timestamp');
 
 
@@ -47,6 +48,13 @@ function setVideoProgress() {
 	video.currentTime = (+progress.value * video.duration) / 100;
 }
 
+// Set audio volume
+function setVolume() {
+	video.volume = this.value;
+	console.log(volume);
+	
+}
+
 // Stop video
 function stopVideo() {
 	video.currentTime = 0;
@@ -58,6 +66,8 @@ video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
+
+volume.addEventListener('mousemove', setVolume);
 
 play.addEventListener('click', toggleVideoStatus);
 
